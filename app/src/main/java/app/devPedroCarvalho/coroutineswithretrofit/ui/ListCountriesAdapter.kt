@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import app.devPedroCarvalho.coroutineswithretrofit.R
 
-class ListAdapter(val list: List<String>): RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
+class ListCountriesAdapter(val listCountries: List<String>): RecyclerView.Adapter<ListCountriesAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_recycler_view, parent,false)
@@ -16,11 +16,11 @@ class ListAdapter(val list: List<String>): RecyclerView.Adapter<ListAdapter.List
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return listCountries.size
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-       holder.title.text = list[position]
+       holder.title.text = listCountries[position]
     }
 
 

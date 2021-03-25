@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         addAnimals()
 
         binding.listItemsRecyclerView.layoutManager = LinearLayoutManager(this)
-        binding.listItemsRecyclerView.adapter = ListAdapter(animals)
+        binding.listItemsRecyclerView.adapter = ListCountriesAdapter(animals)
 
     }
 
